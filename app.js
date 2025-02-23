@@ -15,6 +15,19 @@ function addLocal() {
   localStorage.setItem('users', JSON.stringify(data))
 }
 
+// time
+function setTime() {
+  let now = new Date();
+
+  let hour = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
+  let minute = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
+  let year = now.getFullYear();
+  let month = now.getMonth() + 1;
+  let day = now.getDate();
+
+  return `${hour}:${minute}  ${day}/${month}/${year}`
+}   
+
 // add person
 function addPerson() {
   table.innerHTML = ``
@@ -24,6 +37,7 @@ function addPerson() {
         <td class="oneItem">${i + 1}</td>
         <td class="first_name">${item.Fname}</td>
         <td class="second_name">${item.Lname}</td>
+        <td class="time">${item.date}</td>
         <td class="bal">${item.score}</td>
         <td onclick="delet(${i})" class="delete_item"><i class="fa-solid fa-trash"></i></td>
         <td onclick="editUser(${i})" class="edit_item"><i class="fa-solid fa-pen"></i></td>
@@ -59,7 +73,7 @@ formCreate.addEventListener('submit', (e) => {
   let scoreOf = formCreate.score.value;
 
   if(First_name.length && Last_name.length && scoreOf.length) {
-    data.push({Fname: First_name, Lname: Last_name, score: scoreOf})
+    data.push({Fname: First_name, Lname: Last_name, score: scoreOf, date: setTime()})
     sortedStudents()
     addPerson()
     addLocal()
@@ -87,8 +101,7 @@ formEdit.addEventListener('submit', (e) => {
   if(First_name.length && Last_name.length && scoreOf.length) {
     let newUser = data.map((user, i) => {
       if(editId == i) {
-        
-        return {...user, Fname: First_name, Lname: Last_name, score: scoreOf}
+        return {...user, Fname: First_name, Lname: Last_name, score: scoreOf, date: setTime()}
       } else {
         return {...user}
       }
