@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD list</title>
+  <link rel="icon" href="https://www.cipcourses.com/wp-content/uploads/2021/10/The-Value-of-Teacher-Evaluations-and-Student-Ratings.jpg">
+  <!-- bootstap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="crud">
+    <div>
+
+      <h1 class="user_add">Students Rating </h1>
+      <button class="add_user">Add User</button>
+    </div>
+    <table>
+    
+      <tbody>
+  
+      </tbody>
+    </table>
+    <ul>
+
+    </ul>
+  </div>
+
+
+  <div class="overflow d-none" >
+    <form class="create_form">  
+      <label>
+        <span>First name:</span>
+        <input id="Fname" type="text" class="form-control">
+      </label>
+      <label>
+        <span>Last name:</span>
+        <input id="Lname" type="text" class="form-control">
+      </label>
+      <label>
+        <span>Score:</span>
+        <input id="score" type="number" class="form-control">
+      </label>
+      <span class="message d-none ">PLease fill the form</span>
+      <button type="submit" class="btn btn-success mt-4">Submit</button>
+    </form>
+  </div>
+
+  <!-- edit button -->
+  <div class="overflow_edit d-none" >
+    <form class="edit_form">
+      <h3>Edit Form</h3>
+      <label>
+        <span>First name:</span>
+        <input id="Fname_edit" type="text" class="form-control ">
+      </label>
+      <label>
+        <span>Last name:</span>
+        <input id="Lname_edit" type="text" class="form-control">
+      </label>
+      <label>
+        <span>Score:</span>
+        <input id="score_edit" type="number" class="form-control">
+      </label>
+      <span class="message_edit d-none ">PLease fill the form</span>
+      <button type="submit" class="btn btn-success mt-4">Submit</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

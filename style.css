@@ -1,0 +1,236 @@
+@import url(https://fonts.googleapis.com/css2?family=Sanchez&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Sanchez', serif;
+  background-color: #fff;
+  position: relative;
+  max-width: 100vw;
+  padding-top: 100px;
+  background-image: url(./background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.crud {
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.3);
+  background-color: rgb(0, 255, 229);
+  padding: 20px;
+  gap: 20px;
+}
+.user_add {
+  text-align: center;
+  color: #000;
+}
+.add_user {
+  width: 300px;
+  outline: none;
+  background-color: coral;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+.sort_user {
+  width: 150px;
+  outline: none;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+
+}
+.add_user:active {
+  background-color: rgba(0, 128, 0, 0.849);
+}
+form {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 20px 10px;
+  border-radius: 10px;
+  /* align-items: center; */
+  flex-direction: column;
+  z-index: 10;
+}
+form label input {
+  width: 95% !important;
+}
+.edit_form h3{
+  text-align: center;
+}
+form label {
+  width: 100%;
+  margin: 10px;
+}
+ul {
+  width: 100%;
+  list-style: none;
+  overflow-y: auto;
+}
+.delete {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: red;
+  width: 30px;
+  color: #fff;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  width: 100%;
+}
+li {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+}
+h5 {
+  font-size: 20px;
+  text-align: center;
+
+}
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.message {
+  font-size: 14px;
+  color: red;
+  text-align: start;
+  display: flex;
+  justify-content: start;
+}
+.message_edit {
+  font-size: 14px;
+  color: red;
+  text-align: start !important;
+  display: flex;
+  justify-content: start;
+}
+.hidden {
+  display: none;
+}
+.overflow {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+.overflow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Orqa fonni shaffof qilish */
+  backdrop-filter: blur(3px); /* Xiralik berish */
+  z-index: 1;
+}
+.overflow_edit {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+.overflow_edit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Orqa fonni shaffof qilish */
+  backdrop-filter: blur(3px); /* Xiralik berish */
+  z-index: 1;
+}
+table {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+
+td {
+  padding: 7px;
+  border: 1px solid black;
+  display: inline-block;
+}
+tr {
+  display: flex;
+}
+.oneItem {
+  width: 80px;
+  text-align: center;
+}
+.first_name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.second_name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bal {
+  max-width: 100px;
+  width: 100%;
+  text-align: center;
+}
+.delete_item {
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+.delete_item i {
+  color: red;
+}
+.edit_item {
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+.edit_item {
+  color: coral;
+}
+.no_user {
+  background-color: rgb(255, 217, 0);
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
